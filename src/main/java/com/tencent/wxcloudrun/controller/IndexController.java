@@ -22,7 +22,7 @@ public class IndexController {
         // 获取其他请求相关信息，如 User-Agent 等
         String userAgent = request.getHeader("User-Agent");
 
-        // 可以根据需要记录更多信息，如请求时间、请求路径等
+        // 可以根据需要记录更多信息，如请求时间、请求路径
         
         // 在这里处理记录信息的逻辑，例如保存到日志
         System.out.println("IP地址：" + ipAddress);
