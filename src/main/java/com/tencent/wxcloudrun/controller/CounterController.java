@@ -37,7 +37,7 @@ public class CounterController {
    * @return API response json
    */
   @GetMapping(value = "/api/count")
-  ApiResponse get() {
+  ApiResponse get(HttpServletRequest request) {
     logger.info("/api/count get request");
     // 获取请求者的 IP 地址
         String ipAddress = request.getRemoteAddr();
