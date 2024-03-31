@@ -15,7 +15,7 @@ public class IndexController {
    * @return API response html
    */
   @GetMapping
-  public String index() {
+  public String index(HttpServletRequest request) {
 // 获取请求者的 IP 地址
         String ipAddress = request.getRemoteAddr();
         
