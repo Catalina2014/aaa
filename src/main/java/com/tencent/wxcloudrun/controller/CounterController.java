@@ -39,6 +39,17 @@ public class CounterController {
   @GetMapping(value = "/api/count")
   ApiResponse get() {
     logger.info("/api/count get request");
+    // 获取请求者的 IP 地址
+        String ipAddress = request.getRemoteAddr();
+        
+        // 获取其他请求相关信息，如 User-Agent 等
+        String userAgent = request.getHeader("User-Agent");
+
+        // 可以根据需要记录更多信息，如请求时间、请求路径等
+        
+        // 在这里处理记录信息的逻辑，例如保存到日志中
+        logger.info("IP地址：" + ipAddress);
+        logger.info("User-Agent：" + userAgent);
     Optional<Counter> counter = counterService.getCounter(1);
     Integer count = 0;
     if (counter.isPresent()) {
