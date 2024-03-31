@@ -24,7 +24,7 @@ public class IndexController {
 
         // 可以根据需要记录更多信息，如请求时间、请求路径等
         
-        // 在这里处理记录信息的逻辑，例如保存到日志中
+        // 在这里处理记录信息的逻辑，例如保存到日志
         System.out.println("IP地址：" + ipAddress);
         System.out.println("User-Agent：" + userAgent);
     return "index";
